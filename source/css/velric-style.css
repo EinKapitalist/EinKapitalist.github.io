@@ -1,0 +1,88 @@
+.card-announcement .item-headline span {
+  font-size: 0;
+}
+
+.card-announcement .item-headline span::after {
+  content: "关于我";
+  font-size: 16px;
+}
+
+.card-announcement .velric-about {
+  text-align: left;
+}
+
+.card-announcement .velric-about p {
+  margin: 0 0 10px;
+  line-height: 1.65;
+}
+
+.card-announcement .velric-about .velric-contact {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+/* 首页文章卡片：不规则黄绿渐变 */
+#recent-posts > .recent-post-items > .recent-post-item {
+  background:
+    radial-gradient(ellipse at 8% 18%, rgba(255, 230, 92, 0.72) 0%, rgba(255, 230, 92, 0.22) 27%, transparent 48%),
+    radial-gradient(ellipse at 88% 12%, rgba(155, 220, 86, 0.68) 0%, rgba(155, 220, 86, 0.2) 30%, transparent 52%),
+    radial-gradient(ellipse at 72% 92%, rgba(213, 239, 111, 0.62) 0%, rgba(213, 239, 111, 0.18) 28%, transparent 50%),
+    radial-gradient(ellipse at 24% 82%, rgba(255, 245, 166, 0.72) 0%, transparent 45%),
+    linear-gradient(128deg, #fff8bd 0%, #e8f5a6 47%, #c9ed9b 100%);
+}
+
+[data-theme="dark"] #recent-posts > .recent-post-items > .recent-post-item {
+  background:
+    radial-gradient(ellipse at 10% 18%, rgba(201, 174, 48, 0.42) 0%, transparent 48%),
+    radial-gradient(ellipse at 86% 16%, rgba(100, 156, 58, 0.48) 0%, transparent 52%),
+    radial-gradient(ellipse at 68% 92%, rgba(149, 177, 54, 0.34) 0%, transparent 50%),
+    linear-gradient(128deg, #3b3b25 0%, #314426 52%, #263c29 100%);
+}
+
+#page-header.full_page,
+#page-header.post-bg {
+  overflow: hidden;
+}
+
+#page-header.full_page::after,
+#page-header.post-bg::after {
+  position: absolute;
+  right: -5%;
+  bottom: -1px;
+  left: -5%;
+  z-index: 2;
+  height: 90px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 90' preserveAspectRatio='none'%3E%3Cpath fill='white' fill-opacity='.28' d='M0 42 C180 4 300 78 480 38 S780 8 960 44 S1260 70 1440 30 V90 H0Z'/%3E%3Cpath fill='white' fill-opacity='.55' d='M0 58 C160 20 320 85 520 50 S820 30 1020 58 S1280 82 1440 48 V90 H0Z'/%3E%3Cpath fill='white' d='M0 72 C180 45 360 88 560 68 S900 52 1120 72 S1320 82 1440 64 V90 H0Z'/%3E%3C/svg%3E");
+  background-position: 0 bottom;
+  background-size: 1440px 90px;
+  background-repeat: repeat-x;
+  content: "";
+  pointer-events: none;
+  animation: velric-cloud-wave 18s linear infinite;
+}
+
+@keyframes velric-cloud-wave {
+  from {
+    background-position-x: 0;
+  }
+
+  to {
+    background-position-x: 1440px;
+  }
+}
+
+@media (max-width: 768px) {
+  #page-header.full_page::after,
+  #page-header.post-bg::after {
+    height: 65px;
+    background-size: 1040px 65px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #page-header.full_page::after,
+  #page-header.post-bg::after {
+    animation: none;
+  }
+}

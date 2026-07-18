@@ -63,10 +63,10 @@ avatar:
 disable_top_img: false
 
 # If the banner of page not setting, it will show the default_top_img
-default_top_img:
+default_top_img: /img/background.jpg
 
 # The banner image of index page
-index_img: /img/background.jpg
+index_img: /img/home-sailboat.jpg
 
 # The banner image of archive page
 archive_img:
@@ -143,9 +143,9 @@ post_meta:
 # The top_img settings of home page
 # default: top img - full screen, site info - middle
 # The position of site info, eg: 300px/300em/300rem/10%
-index_site_info_top:
+index_site_info_top: 42%
 # The height of top_img, eg: 300px/300em/300rem
-index_top_img_height:
+index_top_img_height: 60vh
 
 # The subtitle on homepage
 subtitle:
@@ -287,7 +287,15 @@ aside:
       link: https://github.com/xxxxxx
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: >-
+      <div class="velric-about">
+        <p>🌱 Born 2008-8-3 in China — a recreational coder &amp; open source enthusiast, currently a first-year CS undergraduate.</p>
+        <p>I like to spend time on interesting things.</p>
+        <p>I'm grateful to live in an open-source world. I love VS Code. TvT</p>
+        <p>I'm happy to contribute for free to fun projects &amp; ideas, feel free to email me.</p>
+        <p>If you're interested in what I'm building, welcome to join me.</p>
+        <p class="velric-contact">联系方式：<a href="https://t.me/Velric00" target="_blank" rel="noopener noreferrer">t.me/Velric00</a></p>
+      </div>
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -1057,6 +1065,7 @@ css_prefix: true
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
   head:
+    - <link rel="stylesheet" href="/css/velric-style.css">
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
     # - <script src="xxxx"></script>
