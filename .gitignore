@@ -1,0 +1,18 @@
+# Node依赖目录
+node_modules/
+
+# Hexo生成的网站文件
+public/
+
+# Hexo部署缓存
+.deploy*/
+
+# Hexo数据库缓存
+db.json
+
+# 日志文件
+*.log
+
+# Windows和macOS系统文件
+Thumbs.db
+.DS_Store
